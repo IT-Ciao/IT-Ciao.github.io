@@ -1,0 +1,29 @@
+ <script>
+$(function(){
+	$.get("json/home.json",function(data){
+		$("#home-intro").html(data[0].descriptions);
+		$("#home-specialty").html(data[1].descriptions);
+	});
+});
+</script>
+
+<div class="col-sm-3 ps-container">
+	<img src="file/photosticker.jpg" alt="" class="img-circle">
+</div>
+
+<div class="col-sm-9">
+	<h1 class="home-title">
+		自我介紹
+	</h1>
+
+	<div id="home-intro" class="descriptions"></div>
+	<br><br>
+</div>
+
+<div class="col-sm-12">	
+	<h1 class="home-title">
+		網站開發專長
+	</h1>
+	<div id="home-specialty" class="descriptions"></div>
+	<br><br>
+</div>
